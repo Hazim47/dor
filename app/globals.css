@@ -1952,7 +1952,7 @@ img {
 }
 
 .seg button.active {
-  color: #fff;
+  color: #ec0303;
 }
 
 .seg-pill {
@@ -2887,4 +2887,28 @@ img {
     font-weight: 800;
     line-height: 1.4;
   }
+}
+.seg {
+  background: var(--g100);
+  border: 2px solid var(--sand);
+}
+
+.seg button {
+  color: var(--g700);
+  transition:
+    background 0.25s,
+    color 0.25s,
+    box-shadow 0.25s;
+}
+
+/* الزر المختار */
+.seg button.active {
+  background: linear-gradient(135deg, var(--g600), var(--g800));
+  color: #fff;
+  box-shadow: 0 8px 18px -8px rgba(21, 77, 50, 0.8);
+}
+
+/* اللون الذهبي عشان يبين أكتر */
+.seg button.active span {
+  color: var(--gold);
 }
