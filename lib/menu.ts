@@ -162,6 +162,7 @@ export const products: Product[] = [
     id: "avocado",
     category: "cocktail",
     name: "أفوكادو",
+    desc: "كوكتيل طبيعي",
     sizes: SL(1.5, 2.25),
     image: "/images/cocktail-avocado.jpg",
     emoji: "🥑",

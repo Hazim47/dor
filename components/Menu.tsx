@@ -42,16 +42,12 @@ function ProductCard({ p, index }: { p: Product; index: number }) {
 
   return (
     <motion.article
-      layout
       className="card"
-      initial={{ opacity: 0, y: 60, scale: 0.9 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.8 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{
-        delay: (index % 6) * 0.07,
-        type: "spring",
-        stiffness: 140,
-        damping: 18,
+        delay: (index % 6) * 0.05,
+        duration: 0.25,
       }}
       whileHover={{ y: -10 }}
     >
@@ -258,13 +254,11 @@ export default function Menu() {
           ))}
         </div>
 
-        <motion.div layout className="grid">
-          <AnimatePresence mode="popLayout">
-            {list.map((p, i) => (
-              <ProductCard key={p.id} p={p} index={i} />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        <div className="grid">
+          {list.map((p, i) => (
+            <ProductCard key={p.id} p={p} index={i} />
+          ))}
+        </div>
       </div>
     </section>
   );
